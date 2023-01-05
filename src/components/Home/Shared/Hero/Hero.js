@@ -33,9 +33,9 @@ export default function Hero() {
           <div className="w-full relative  px-8 py-4 h-[500px]">
             {" "}
             <img
-              className="w-full flip  rounded-xl "
+              className="w-full   rounded-xl "
               src={
-                "https://img.freepik.com/free-photo/fresh-fruits-arrangement-view_23-2148949698.jpg?w=740&t=st=1672829482~exp=1672830082~hmac=e3c1b3efc98ac7a8cc9ebe8e92e06086313d1554650a54c861b53359dda10cb8"
+                "https://cdn.shopify.com/s/files/1/0652/4570/8532/files/slider-1-2.jpg?v=1659427625&width=2100"
               }
               alt=""
             />
@@ -53,7 +53,7 @@ export default function Hero() {
             <img
               className="w-full rounded-xl "
               src={
-                "https://img.freepik.com/free-photo/vegetables-arrangement-with-copy-space_23-2148949685.jpg?w=740&t=st=1672829421~exp=1672830021~hmac=c891133ddc4c33f9fc4fae1a05ac04d09e86481f594890ba0c2185c84a77ae15"
+                "https://cdn.shopify.com/s/files/1/0652/4570/8532/files/slider-1-1.jpg?v=1659427625&width=2100"
               }
               alt=""
             />

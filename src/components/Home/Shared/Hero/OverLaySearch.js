@@ -4,8 +4,8 @@ import React from "react";
 
 const OverLaySearch = ({ title, p }) => {
   return (
-    <div className="w-full gap-4 px-12 flex flex-col justify-center items-start">
-      <h1 className="lg:text-7xl md:text-6xl lg:w-1/2 md:1/3 first-line: text-5xl text-left   text-[#253d4e] font-semibold">
+    <div className="w-full gap-4 lg:px-20 px-12 flex flex-col justify-center items-start">
+      <h1 className="lg:text-7xl md:text-6xl lg:w-1/2 md:w-1/2 first-line: text-5xl text-left   text-[#253d4e] font-semibold">
         {title}
       </h1>
       <p className="CTC font-semibold">{p}</p>
