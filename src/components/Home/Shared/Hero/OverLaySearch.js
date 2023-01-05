@@ -5,7 +5,7 @@ import React from "react";
 const OverLaySearch = () => {
   return (
     <div className="w-full gap-4 px-12 flex flex-col justify-center items-start">
-      <h1 className="lg:text-7xl md:text-6xl text-4xl text-left   lg:text-gray-600 font-semibold">
+      <h1 className="lg:text-7xl md:text-6xl text-5xl text-left   lg:text-gray-600 font-semibold">
         Fresh VegeTable <br />
         Big discount
       </h1>
@@ -15,7 +15,7 @@ const OverLaySearch = () => {
           icon={faPaperPlane}
         />
         <input
-          className="py-4 px-2 w-36 outline-none"
+          className="py-4 px-2 lg:w-full md:w-full w-36 outline-none"
           placeholder="Your Email address"
           type="email"
           name=""
