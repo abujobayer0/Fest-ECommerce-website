@@ -15,7 +15,7 @@ const OverLaySearch = ({ title, p }) => {
           icon={faPaperPlane}
         />
         <input
-          className="py-4 px-2 lg:w-full md:w-full w-52 outline-none"
+          className="py-4 px-2 lg:w-full md:w-full w-48 outline-none"
           placeholder="Your Email address"
           type="email"
           name=""
