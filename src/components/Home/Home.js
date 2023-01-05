@@ -1,6 +1,7 @@
 import React from "react";
 
 import Top from "../Top/Top";
+import Catagories from "./Shared/Catagories/Catagories";
 import Hero from "./Shared/Hero/Hero";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
     <div className="relative  ">
       <Top></Top>
       <Hero></Hero>
+      <Catagories></Catagories>
     </div>
   );
 };
