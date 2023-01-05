@@ -2,13 +2,13 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-const OverLaySearch = () => {
+const OverLaySearch = ({ title, p }) => {
   return (
     <div className="w-full gap-4 px-12 flex flex-col justify-center items-start">
-      <h1 className="lg:text-7xl md:text-6xl text-5xl text-left   lg:text-gray-600 font-semibold">
-        Fresh VegeTable <br />
-        Big discount
+      <h1 className="lg:text-7xl md:text-6xl lg:w-1/2 md:1/3 first-line: text-5xl text-left   text-[#253d4e] font-semibold">
+        {title}
       </h1>
+      <p className="CTC font-semibold">{p}</p>
       <div className="flex  justify-center items-center bg-white rounded-full">
         <FontAwesomeIcon
           className="text-gray-600 px-4 lg:px-8 text-xl py-4 rounded-full bg-white"

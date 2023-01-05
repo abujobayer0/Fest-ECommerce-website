@@ -40,7 +40,10 @@ export default function Hero() {
               alt=""
             />
             <div className="w-full absolute flex  left-0  top-0 h-[500px]">
-              <OverLaySearch></OverLaySearch>
+              <OverLaySearch
+                title={"  Fresh VegeTable  Big discount"}
+                p={"Sign Up for Daily newslatter"}
+              ></OverLaySearch>
             </div>
           </div>
         </SwiperSlide>
@@ -53,9 +56,12 @@ export default function Hero() {
                 "https://img.freepik.com/free-photo/vegetables-arrangement-with-copy-space_23-2148949685.jpg?w=740&t=st=1672829421~exp=1672830021~hmac=c891133ddc4c33f9fc4fae1a05ac04d09e86481f594890ba0c2185c84a77ae15"
               }
               alt=""
-            />{" "}
-            <div className="w-full absolute flex justify-start items-center top-0 h-[500px]">
-              <OverLaySearch></OverLaySearch>
+            />
+            <div className="w-full absolute flex  left-0  top-0 h-[500px]">
+              <OverLaySearch
+                title={"Dont miss amazing grocerry deals"}
+                p={"Tell Your Story"}
+              ></OverLaySearch>
             </div>
           </div>
         </SwiperSlide>
