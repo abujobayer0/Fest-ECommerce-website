@@ -49,7 +49,7 @@ const NavPart = () => {
     { name: "Bread and Juice", icon: <LunchDiningIcon /> },
   ];
   return (
-    <div className="flex px-4 z-10 shadow-sm items-center py-4 justify-between">
+    <div className="flex sticky top-0 px-4 z-10 shadow-sm items-center py-4 justify-between">
       <div>
         <ThemeProvider theme={theme}>
           <Button
