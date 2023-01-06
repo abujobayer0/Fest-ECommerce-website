@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import "swiper/css/autoplay";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import SlideItem from "./SlideItem";
 const Catagories = () => {
   const [products, setProducts] = useState([]);
@@ -23,6 +24,7 @@ const Catagories = () => {
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
+        autoplay={{ delay: 3000 }}
         rewind={true}
         breakpoints={{
           640: {
@@ -38,7 +40,7 @@ const Catagories = () => {
             spaceBetween: 50,
           },
         }}
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         className="mySwiper"
       >
         {products.map((product) => (

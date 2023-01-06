@@ -1,8 +1,15 @@
 import {
+  faBlog,
   faCartShopping,
   faClose,
+  faContactCard,
+  faDashboard,
   faFire,
+  faHome,
   faNavicon,
+  faPager,
+  faPlateWheat,
+  faShop,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
@@ -52,15 +59,15 @@ const ResponsiveNav = () => {
             </button>
           </div>
           <div className="w-full">
-            <ul className="flex mx-auto justify-center items-center w-full text-md font-semibold flex-col text-gray-700 gap-4">
+            <ul className="flex mx-auto gap-0 justify-center items-center w-full text-md font-semibold flex-col text-gray-700 gap-4">
               <Li i={"Deals"} l={faFire}></Li>
-              <Li i={"Home"}></Li>
-              <Li i={"About Shop"}></Li>
-              <Li i={"Vendors"}></Li>
-              <Li i={"Mega Menu"}></Li>
-              <Li i={"Blog"}></Li>
-              <Li i={"Pages"}></Li>
-              <Li i={"Contact"}></Li>
+              <Li i={"Home"} l={faHome}></Li>
+              <Li i={"About Shop"} l={faShop}></Li>
+              <Li i={"Vendors"} l={faDashboard}></Li>
+              <Li i={"Mega Menu"} l={faPlateWheat}></Li>
+              <Li i={"Blog"} l={faBlog}></Li>
+              <Li i={"Pages"} l={faPager}></Li>
+              <Li i={"Contact"} l={faContactCard}></Li>
             </ul>
           </div>
         </div>
