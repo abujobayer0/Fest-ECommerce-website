@@ -108,11 +108,11 @@ const NavPart = () => {
           {({ TransitionProps }) => (
             <Fade {...TransitionProps} timeout={350}>
               <div
-                className="rounded-lg border-2 bg-white glass
+                className="rounded-lg lg:flex hidden border-2 bg-white glass
                 relative m-1 "
               >
                 <Typography sx={{ m: 1 }}>
-                  <div className="grid gap-2 p-4  grid-cols-2">
+                  <div className="grid  gap-2 p-4  grid-cols-2">
                     {CataItem.map((item) => (
                       <Catagories catagory={item} />
                     ))}
