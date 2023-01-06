@@ -45,6 +45,7 @@ const Catagories = () => {
           <SwiperSlide>
             {" "}
             <SlideItem
+              key={product.image}
               name={product.name}
               bg={product.bg}
               img={product.image}

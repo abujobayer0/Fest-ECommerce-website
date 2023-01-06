@@ -3,7 +3,10 @@ import React from "react";
 const SlideItem = ({ name, img, bg }) => {
   return (
     <div
-      className={`w-44 rounded-lg flex  bg-${bg}-200 py-4 justify-center items-center flex-col cursor-pointer `}
+      style={{ backgroundColor: bg }}
+      className={
+        "w-44 rounded-lg flex  py-4 justify-center items-center flex-col cursor-pointer bg--100 "
+      }
     >
       <div className="w-28 ">
         <img src={img} className="w-full" alt="" />

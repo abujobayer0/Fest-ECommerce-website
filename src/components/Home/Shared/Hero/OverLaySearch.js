@@ -21,7 +21,7 @@ const OverLaySearch = ({ title, p }) => {
           name=""
           id=""
         />
-        <button className="bg-[#3bb77e] rounded-full text-lg text-white  px-4 lg:px-8 py-4">
+        <button className="bg-[#3bb77e] font-semibold text-md rounded-full  text-white  px-4 lg:px-8 py-4">
           Subscribe
         </button>
       </div>
