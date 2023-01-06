@@ -14,6 +14,7 @@ import LunchDiningIcon from "@mui/icons-material/LunchDining";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import AddBusinessIcon from "@mui/icons-material/AddBusiness";
 import RamenDiningIcon from "@mui/icons-material/RamenDining";
+import { Link } from "react-router-dom";
 const NavPart = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [open, setOpen] = React.useState(false);
@@ -125,20 +126,36 @@ const NavPart = () => {
       </div>
       <div>
         <ul className="flex text-md font-semibold text-gray-700 gap-4">
-          <li>
-            <FontAwesomeIcon
-              className="text-lg px-2 text-[#3bb77e]"
-              icon={faFire}
-            />
-            Deals
-          </li>
-          <li>Home</li>
-          <li>About Shop</li>
-          <li> Vendors</li>
-          <li>Mega Menu</li>
-          <li>Blog</li>
-          <li>Pages</li>
-          <li>Contact</li>
+          <Link to={"/deals"}>
+            <li>
+              <FontAwesomeIcon
+                className="text-lg px-2 text-[#3bb77e]"
+                icon={faFire}
+              />
+              Deals
+            </li>
+          </Link>
+          <Link to={"/home"}>
+            <li>Home</li>
+          </Link>
+          <Link>
+            <li>About Shop</li>
+          </Link>
+          <Link>
+            <li> Vendors</li>
+          </Link>
+          <Link>
+            <li>Mega Menu</li>
+          </Link>
+          <Link to={"/blog"}>
+            <li>Blog</li>
+          </Link>
+          <Link to={"/pages"}>
+            <li>Pages</li>
+          </Link>
+          <Link to={"/contact"}>
+            <li>Contact</li>
+          </Link>
         </ul>
       </div>
       <div className="lg:flex   items-center   gap-2">
