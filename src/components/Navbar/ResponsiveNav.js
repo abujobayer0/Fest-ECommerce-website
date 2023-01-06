@@ -6,6 +6,7 @@ import {
   faDashboard,
   faFire,
   faHome,
+  faInfo,
   faNavicon,
   faPager,
   faPlateWheat,
@@ -59,15 +60,16 @@ const ResponsiveNav = () => {
             </button>
           </div>
           <div className="w-full">
-            <ul className="flex mx-auto gap-0 justify-center items-center w-full text-md font-semibold flex-col text-gray-700 gap-4">
-              <Li i={"Deals"} l={faFire}></Li>
-              <Li i={"Home"} l={faHome}></Li>
-              <Li i={"About Shop"} l={faShop}></Li>
-              <Li i={"Vendors"} l={faDashboard}></Li>
-              <Li i={"Mega Menu"} l={faPlateWheat}></Li>
-              <Li i={"Blog"} l={faBlog}></Li>
-              <Li i={"Pages"} l={faPager}></Li>
-              <Li i={"Contact"} l={faContactCard}></Li>
+            <ul className="flex mx-auto gap-0 justify-center items-center w-full text-md font-semibold flex-col text-gray-700 ">
+              <Li i={"Deals"} link={"/deals"} l={faFire}></Li>
+              <Li i={"Home"} link={"/home"} l={faHome}></Li>
+              <Li i={"About"} link={"/about"} l={faInfo}></Li>
+              <Li i={"Shop"} link={"/"} l={faShop}></Li>
+              <Li i={"Vendors"} link={"vendors"} l={faDashboard}></Li>
+              <Li i={"Mega Menu"} link={"/"} l={faPlateWheat}></Li>
+              <Li i={"Blog"} link={"/blog"} l={faBlog}></Li>
+              <Li i={"Pages"} link={"/"} l={faPager}></Li>
+              <Li i={"Contact"} link={"/contact"} l={faContactCard}></Li>
             </ul>
           </div>
         </div>

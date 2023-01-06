@@ -139,7 +139,10 @@ const NavPart = () => {
             <li>Home</li>
           </Link>
           <Link>
-            <li>About Shop</li>
+            <li>About </li>
+          </Link>
+          <Link>
+            <li>Shop </li>
           </Link>
           <Link>
             <li> Vendors</li>
