@@ -24,7 +24,7 @@ const ResponsiveNav = () => {
   return (
     <div className="w-full ">
       {openNav === false ? (
-        <div className="flex px-8  sticky top-0 transition-all  ease-in-out duration-300 justify-between py-4 items-center w-full">
+        <div className="flex px-8  sticky top-0 left-0 transition-all  ease-in-out duration-300 justify-between py-4 items-center w-full">
           <div>
             <button onClick={() => setOpenNav(true)}>
               <FontAwesomeIcon
@@ -59,7 +59,7 @@ const ResponsiveNav = () => {
               />
             </button>
           </div>
-          <div className="w-full">
+          <div className="w-full ">
             <ul className="flex mx-auto gap-0 justify-center items-center w-full text-md font-semibold flex-col text-gray-700 ">
               <Li i={"Deals"} link={"/deals"} l={faFire}></Li>
               <Li i={"Home"} link={"/home"} l={faHome}></Li>
