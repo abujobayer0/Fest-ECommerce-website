@@ -9,19 +9,19 @@ import React from "react";
 import LOGO from "../Images/LOGO.png";
 const Nest = () => {
   return (
-    <div className="flex justify-start   items-start  w-full gap-8 flex-col">
+    <div className="flex items-center justify-start   items-start  w-full gap-8 flex-col">
       <img className="w-52" src={LOGO} alt="" />
       <div className=" flex text-md flex-col gap-4 text-left text-gray-700">
-        <p>
+        <p className="flex items-center">
           <span>
             <FontAwesomeIcon
               className="text-[#3bb77e] px-2"
               icon={faLocation}
             />
           </span>
-          Address 5433 W Campbell ave Undefiend Kent,Utah 53423 United States
+          Kent,Utah 53423 United States
         </p>
-        <p>
+        <p className="flex items-center ">
           <span>
             <FontAwesomeIcon
               className="text-[#3bb77e] px-2"
@@ -31,7 +31,7 @@ const Nest = () => {
           Call us
           <span className="text-[#3bb77e]"> (+81)-543-345-423423</span>
         </p>
-        <p>
+        <p className="flex items-center">
           <span>
             <FontAwesomeIcon
               className="text-[#3bb77e] px-2"
@@ -40,7 +40,7 @@ const Nest = () => {
           </span>
           Email <span className="text-[#3bb77e]">Sale@Fest.com</span>
         </p>
-        <p>
+        <p className="flex items-center">
           <span>
             <FontAwesomeIcon className="text-[#3bb77e] px-2" icon={faClock} />
           </span>
