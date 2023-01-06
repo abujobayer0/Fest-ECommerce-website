@@ -1,4 +1,4 @@
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
@@ -21,8 +21,12 @@ const OverLaySearch = ({ title, p }) => {
           name=""
           id=""
         />
-        <button className="bg-[#3bb77e] font-semibold text-md rounded-full  text-white  px-4 lg:px-8 py-4">
-          Subscribe
+        <button className="bg-[#3bb77e] font-semibold flex items-center text-md rounded-full  text-white  px-4 lg:px-8 py-4">
+          Subscribe{" "}
+          <FontAwesomeIcon
+            icon={faHeart}
+            className="text-sm text-orange-200 px-1"
+          />
         </button>
       </div>
     </div>
