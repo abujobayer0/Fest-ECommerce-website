@@ -8,11 +8,12 @@ const InstallApp = () => {
         <p>From App Store or Google Play</p>
         <div className="grid grid-cols-2">
           <img
-            className=""
+            className="hover:scale-x-110 transition-all ease-in-out duration-200"
             src="https://themepanthers.com/wp/nest/d1/wp-content/uploads/2022/02/google-play.jpg"
             alt=""
           />
           <img
+            className="hover:scale-x-110 transition-all ease-in-out duration-200"
             src="https://themepanthers.com/wp/nest/d1/wp-content/uploads/2022/02/app-store.jpg"
             alt=""
           />

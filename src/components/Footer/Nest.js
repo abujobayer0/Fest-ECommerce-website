@@ -28,7 +28,8 @@ const Nest = () => {
               icon={faHeadphones}
             />
           </span>
-          <span className="text-[#3bb77e]">Call us (+81)-543-345-423423</span>
+          Call us
+          <span className="text-[#3bb77e]"> (+81)-543-345-423423</span>
         </p>
         <p>
           <span>

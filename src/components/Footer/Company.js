@@ -6,13 +6,27 @@ const Common = ({ name, one, two, three, four, five, six, seven }) => {
       <h1 className="text-3xl font-semibold">{name}</h1>
       <div>
         <ul className="text-left flex flex-col gap-4">
-          <li>{one}</li>
-          <li> {two}</li>
-          <li> {three} </li>
-          <li> {four}</li>
-          <li> {five}</li>
-          <li> {six}</li>
-          <li>{seven}</li>
+          <a href="#">
+            <li>{one}</li>
+          </a>
+          <a href="#">
+            <li> {two}</li>
+          </a>
+          <a href="#">
+            <li> {three} </li>
+          </a>
+          <a href="#">
+            <li> {four}</li>
+          </a>
+          <a href="#">
+            <li> {five}</li>
+          </a>
+          <a href="#">
+            <li> {six}</li>
+          </a>
+          <a href="#">
+            <li>{seven}</li>
+          </a>
         </ul>
       </div>
     </div>
