@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Common = ({ name, one, two, three, four, five, six, seven }) => {
   return (
@@ -6,27 +7,27 @@ const Common = ({ name, one, two, three, four, five, six, seven }) => {
       <h1 className="text-3xl font-semibold">{name}</h1>
       <div>
         <ul className="text-left flex flex-col gap-4">
-          <a href="#">
+          <Link>
             <li>{one}</li>
-          </a>
-          <a href="#">
+          </Link>
+          <Link>
             <li> {two}</li>
-          </a>
-          <a href="#">
+          </Link>
+          <Link>
             <li> {three} </li>
-          </a>
-          <a href="#">
+          </Link>
+          <Link>
             <li> {four}</li>
-          </a>
-          <a href="#">
+          </Link>
+          <Link>
             <li> {five}</li>
-          </a>
-          <a href="#">
+          </Link>
+          <Link>
             <li> {six}</li>
-          </a>
-          <a href="#">
+          </Link>
+          <Link>
             <li>{seven}</li>
-          </a>
+          </Link>
         </ul>
       </div>
     </div>

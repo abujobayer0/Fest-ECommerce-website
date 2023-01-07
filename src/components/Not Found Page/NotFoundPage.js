@@ -9,7 +9,7 @@ const NotFoundPage = () => {
   return (
     <div className="w-full py-8 flex-col flex justify-center items-center h-fit">
       <Button
-        color={"warning"}
+        style={{ backgroundColor: "#3bb77e" }}
         onClick={() => navigate(-1)}
         variant="contained"
       >
