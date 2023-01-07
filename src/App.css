@@ -1,13 +1,15 @@
 .App {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   text-align: center;
+  color: #253d4e;
 }
-.Cfont{
-  font-family: 'Quicksand',sans-serif;
+.Cfont {
+  font-family: "Quicksand", sans-serif;
 }
-.CTC{
+.CTC {
   color: #9c9993;
-}.CPC{
+}
+.CPC {
   color: #3bb77e;
 }
 .App-logo {
