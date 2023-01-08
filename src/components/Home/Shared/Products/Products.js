@@ -76,15 +76,7 @@ const Products = () => {
           scrollButtons
           allowScrollButtonsMobile
           value={value}
-          TabIndicatorProps={{
-            style: {
-              backgroundColor: "#3bb77e",
-              height: 3,
-              color: "#3bb77e",
-            },
-          }}
           sx={{
-            "& .MuiTabs": { backgroundColor: "#3bb77e" },
             "& .MuiTabs-indicator": { backgroundColor: "#3bb77e" },
             "& .Mui-selected": { color: "#3bb77e" },
           }}
