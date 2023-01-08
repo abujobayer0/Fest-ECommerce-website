@@ -84,6 +84,7 @@ const Products = () => {
             },
           }}
           sx={{
+            "& .MuiTabs": { backgroundColor: "#3bb77e" },
             "& .MuiTabs-indicator": { backgroundColor: "#3bb77e" },
             "& .Mui-selected": { color: "#3bb77e" },
           }}
