@@ -6,6 +6,8 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { ProductionQuantityLimits } from "@mui/icons-material";
+import { createTheme } from "@mui/material";
+import { ThemeProvider } from "styled-components";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -51,51 +53,73 @@ const Products = () => {
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
+  const theme = createTheme({
+    status: {
+      danger: "#e53e3e",
+    },
+    palette: {
+      green: {
+        main: "#3bb77e",
+        contrastText: "#3bb77e",
+      },
+    },
+  });
   return (
-    <div className="w-full place-content-center justify-center items-center flex  flex-col px-12">
-      <h1 className="CPC text-4xl font-semibold  py-4 ">
-        Popular Products <ProductionQuantityLimits />
-      </h1>
-      <hr />
-      <Tabs
-        variant="scrollable"
-        scrollButtons
-        allowScrollButtonsMobile
-        value={value}
-        textColor="secondary"
-        indicatorColor="secondary"
-        onChange={handleChange}
-      >
-        <Tab label="All Popular Products" {...a11yProps(0)} />
-        <Tab label="Dairy" {...a11yProps(1)} />
-        <Tab label="Mart & Grocery" {...a11yProps(2)} />
-        <Tab label="Seeds" {...a11yProps(3)} />
-      </Tabs>
-      <div className="grid md:grid-cols-2 w-full  place-content-center place-items-center grid-cols-1  lg:grid-cols-3  2xl:grid-cols-5">
-        {product.map((product) => (
-          <TabPanel value={value} index={0}>
-            {" "}
-            <SingleProduct product={product} />{" "}
-          </TabPanel>
-        ))}
+    <ThemeProvider theme={theme}>
+      <div className="w-full place-content-center justify-center items-center flex  flex-col px-12">
+        <h1 className="CPC text-4xl font-semibold  py-4 ">
+          Popular Products <ProductionQuantityLimits />
+        </h1>
+        <hr />
+        <Tabs
+          variant="scrollable"
+          scrollButtons
+          allowScrollButtonsMobile
+          value={value}
+          TabIndicatorProps={{
+            style: {
+              backgroundColor: "#3bb77e",
+              height: 3,
+              color: "#3bb77e",
+            },
+          }}
+          sx={{
+            "& .MuiTabs-indicator": { backgroundColor: "#3bb77e" },
+            "& .Mui-selected": { color: "#3bb77e" },
+          }}
+          onChange={handleChange}
+        >
+          <Tab label="All Popular Products" {...a11yProps(0)} />
+          <Tab label="Dairy" {...a11yProps(1)} />
+          <Tab label="Mart & Grocery" {...a11yProps(2)} />
+          <Tab label="Seeds" {...a11yProps(3)} />
+        </Tabs>
+        <div className="grid md:grid-cols-2 w-full  place-content-center place-items-center grid-cols-1  lg:grid-cols-3  2xl:grid-cols-5">
+          {product.map((product) => (
+            <TabPanel value={value} index={0}>
+              {" "}
+              <SingleProduct product={product} />{" "}
+            </TabPanel>
+          ))}
 
-        <TabPanel value={value} index={1}>
-          Item Two
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          Item Three
-        </TabPanel>
-        <TabPanel value={value} index={3}>
-          Item four
-        </TabPanel>
-        <TabPanel value={value} index={4}>
-          Item five
-        </TabPanel>
-        <TabPanel value={value} index={5}>
-          Item six
-        </TabPanel>
+          <TabPanel value={value} index={1}>
+            Item Two
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            Item Three
+          </TabPanel>
+          <TabPanel value={value} index={3}>
+            Item four
+          </TabPanel>
+          <TabPanel value={value} index={4}>
+            Item five
+          </TabPanel>
+          <TabPanel value={value} index={5}>
+            Item six
+          </TabPanel>
+        </div>
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 
