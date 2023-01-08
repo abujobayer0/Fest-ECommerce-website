@@ -14,13 +14,24 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-
+import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
+import EastIcon from "@mui/icons-material/East";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import LOGO from "../Images/LOGO.png";
 import Li from "./Li";
 import "./navbar.module.css";
+import ResponsiveShopMenu from "./ResponsiveShopMenu";
+import ResponsiveMegaMenu from "./ResponsiveMegaMenu";
 const ResponsiveNav = () => {
   const [openNav, setOpenNav] = useState(false);
-
+  const [ShopMenu, setShopMenu] = useState(false);
+  const [megaMenu, setMegaMenu] = useState(false);
+  const handleToggleShop = () => {
+    setShopMenu((current) => !current);
+  };
+  const handleToggleMegaMenu = () => {
+    setMegaMenu((current) => !current);
+  };
   return (
     <div className="w-full ">
       {openNav === false ? (
@@ -46,7 +57,7 @@ const ResponsiveNav = () => {
           </div>
         </div>
       ) : (
-        <div className="w-full  justify-center items-center md:w-1/2 top-0 z-10 left-0 transition-all ease-in-out  text-xl absolute duration-500 bg-white h-fit   ">
+        <div className="w-full  justify-center items-center md:w-1/2 overflow-auto top-0 z-10 left-0 transition-all ease-in-out  text-xl absolute duration-500 bg-white h-[100vh]    ">
           <div className="flex p-4 justify-between relative w-full">
             <img className="w-52 " src={LOGO} alt="" />
             <button
@@ -60,13 +71,40 @@ const ResponsiveNav = () => {
             </button>
           </div>
           <div className="w-full ">
-            <ul className="flex mx-auto gap-0 justify-center items-center w-full text-md font-semibold flex-col text-gray-700 ">
+            <ul className="flex mx-auto  gap-0 justify-center items-center w-full text-md font-semibold flex-col text-gray-700 ">
               <Li i={"Deals"} link={"/deals"} l={faFire}></Li>
               <Li i={"Home"} link={"/home"} l={faHome}></Li>
               <Li i={"About"} link={"/about"} l={faInfo}></Li>
-              <Li i={"Shop"} link={"/"} l={faShop}></Li>
+              <p
+                className="w-full  flex justify-start items-start flex-col text-left"
+                onClick={handleToggleShop}
+              >
+                <Li
+                  i={"Shop"}
+                  ArrowDropDown={ArrowDropDown}
+                  ArrowDropUp={ArrowDropUp}
+                  ShopMenu={ShopMenu}
+                  link={""}
+                  l={faShop}
+                ></Li>
+                {ShopMenu && <ResponsiveShopMenu></ResponsiveShopMenu>}
+              </p>
               <Li i={"Vendors"} link={"vendors"} l={faDashboard}></Li>
-              <Li i={"Mega Menu"} link={"/"} l={faPlateWheat}></Li>
+
+              <p
+                className="w-full gap-4 items-center flex justify-between flex-col text-left"
+                onClick={handleToggleMegaMenu}
+              >
+                <Li
+                  i={"Mega Menu"}
+                  ArrowDropUp={ArrowDropUp}
+                  ArrowDropDown={ArrowDropDown}
+                  link={"/"}
+                  megaMenu={megaMenu}
+                  l={faPlateWheat}
+                ></Li>
+                {megaMenu && <ResponsiveMegaMenu></ResponsiveMegaMenu>}
+              </p>
               <Li i={"Blog"} link={"/blog"} l={faBlog}></Li>
               <Li i={"Pages"} link={"/"} l={faPager}></Li>
               <Li i={"Contact"} link={"/contact"} l={faContactCard}></Li>

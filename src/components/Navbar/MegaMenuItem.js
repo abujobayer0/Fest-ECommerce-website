@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const MegaMenuItem = ({ one, two, three, four, five, six }) => {
   return (
-    <div className="flex flex-col justify-start items-start w-full text-left gap-2">
+    <div className="flex  flex-col justify-start items-start w-full text-left gap-2">
       <h1 className="CPC text-2xl font-semibold">{one}</h1>
       <div className="text-md CTC flex flex-col gap-2  ">
         <Link>
