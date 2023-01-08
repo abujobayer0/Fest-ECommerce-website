@@ -9,10 +9,7 @@ const SingleProduct = ({ product }) => {
   const handleClickOpen = () => {
     setOpen(true);
   };
-  const [hover, setHover] = React.useState(false);
-  const handleHover = () => {
-    setHover((current) => !current);
-  };
+
   const { star, img, name, oldPrice, newPrice, description } = product;
   return (
     <div className="gap-2 w-full flex flex-col px-8 py-4 text-gray-700 justify-center items-center customShadow   ">

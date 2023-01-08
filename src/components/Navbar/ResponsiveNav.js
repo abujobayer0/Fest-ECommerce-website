@@ -15,8 +15,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
-import EastIcon from "@mui/icons-material/East";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import LOGO from "../Images/LOGO.png";
 import Li from "./Li";
 import "./navbar.module.css";

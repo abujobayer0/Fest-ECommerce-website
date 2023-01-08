@@ -9,7 +9,7 @@ import React from "react";
 import LOGO from "../Images/LOGO.png";
 const Nest = () => {
   return (
-    <div className="flex items-center justify-start   items-start  w-full gap-8 flex-col">
+    <div className="flex items-center justify-start    w-full gap-8 flex-col">
       <img className="w-52" src={LOGO} alt="" />
       <div className=" flex text-md flex-col gap-4 text-left text-gray-700">
         <p className="flex items-center">
@@ -29,7 +29,14 @@ const Nest = () => {
             />
           </span>
           Call us
-          <span className="text-[#3bb77e]"> (+81)-543-345-423423</span>
+          <span className="text-[#3bb77e]">
+            <a
+              href="tel:0130346343
+          6"
+            >
+              (+880)1303463436
+            </a>
+          </span>
         </p>
         <p className="flex items-center">
           <span>
