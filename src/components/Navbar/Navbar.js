@@ -6,7 +6,7 @@ import SearchPart from "./SearchPart";
 const Navbar = () => {
   return (
     <div className="flex z-10 sticky  lg:relative top-0 bg-white  w-full">
-      <div className=" lg:flex w-full lg:flex-col hidden">
+      <div className=" lg:flex w-full relative lg:flex-col hidden">
         <SearchPart></SearchPart>
         <NavPart></NavPart>
       </div>
