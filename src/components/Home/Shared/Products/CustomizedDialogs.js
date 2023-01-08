@@ -16,7 +16,8 @@ import {
 import LOGO from "../../../Images/LOGO.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { Card } from "@mui/material";
+import { Tooltip, tooltipClasses } from "@mui/material";
+import { toast, Toaster } from "react-hot-toast";
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
     padding: theme.spacing(2),
@@ -49,7 +50,16 @@ function BootstrapDialogTitle(props) {
     </DialogTitle>
   );
 }
-
+const BootstrapTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} arrow classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.arrow}`]: {
+    color: theme.palette.common.black,
+  },
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: theme.palette.common.black,
+  },
+}));
 BootstrapDialogTitle.propTypes = {
   children: PropTypes.node,
   onClose: PropTypes.func.isRequired,
@@ -67,25 +77,29 @@ export default function CustomizedDialogs({
 }) {
   const handleClose = () => {
     setOpen(false);
+    toast.error("Please Add From Buy Page.");
   };
 
   return (
     <div>
+      <Toaster />
       <div className="flex items-center gap-2  w-full ">
         <h1 className="text-lg font-semibold CPC">
           Quick View <LinearScale />
         </h1>
-        <Button
-          style={{
-            color: "#3bb77e",
-            outline: "2px solid #3bb77e",
-            fontSize: "12px",
-            padding: "3px",
-          }}
-          onClick={handleClickOpen}
-        >
-          <RemoveRedEye />
-        </Button>
+        <BootstrapTooltip title="View ">
+          <Button
+            style={{
+              color: "#3bb77e",
+              outline: "2px solid #3bb77e",
+              fontSize: "12px",
+              padding: "3px",
+            }}
+            onClick={handleClickOpen}
+          >
+            <RemoveRedEye />
+          </Button>
+        </BootstrapTooltip>
       </div>
       <BootstrapDialog
         onClose={handleClose}
