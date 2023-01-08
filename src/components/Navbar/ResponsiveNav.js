@@ -57,7 +57,7 @@ const ResponsiveNav = () => {
           </div>
         </div>
       ) : (
-        <div className="w-full  justify-center items-center md:w-1/2 overflow-auto top-0 z-10 left-0 transition-all ease-in-out  text-xl absolute duration-500 bg-white h-[100vh]    ">
+        <div className="w-full  justify-center items-center md:w-1/2 overflow-auto top-0 z-10 left-0 transition-all ease-in-out  text-xl absolute duration-300 bg-white h-[100vh]    ">
           <div className="flex p-4 justify-between relative w-full">
             <img className="w-52 " src={LOGO} alt="" />
             <button
