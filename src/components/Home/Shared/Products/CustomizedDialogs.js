@@ -8,10 +8,15 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import { LinearScale, RemoveRedEye } from "@mui/icons-material";
+import {
+  LinearScale,
+  ProductionQuantityLimitsOutlined,
+  RemoveRedEye,
+} from "@mui/icons-material";
 import LOGO from "../../../Images/LOGO.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { Card } from "@mui/material";
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
     padding: theme.spacing(2),
@@ -94,7 +99,20 @@ export default function CustomizedDialogs({
           <img className="w-20" src={LOGO} alt="" />
         </BootstrapDialogTitle>
         <DialogContent dividers>
-          <img src={img} alt="" />
+          <span className="w-full text-right flex justify-start  items-center CPC">
+            <ProductionQuantityLimitsOutlined /> Limited
+          </span>
+          <div className="flex">
+            <img src={img} className="w-44 lg:w-52" alt="" />
+            <div className="text-gray-700">
+              <h1 className="text-2xl font-semibold ">{name}</h1>
+              <p>{description}</p>
+              <p className="text-4xl font-semibold CPC my-4">
+                ${newPrice}{" "}
+                <span className="text-2xl text-gray-700">${oldPrice}</span>
+              </p>
+            </div>
+          </div>
         </DialogContent>
         <DialogActions>
           <Button
