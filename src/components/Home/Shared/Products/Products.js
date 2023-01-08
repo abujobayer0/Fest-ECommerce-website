@@ -58,7 +58,7 @@ const Products = () => {
       </h1>
       <hr />
       <Tabs
-        variant="fullWidth"
+        variant="scrollable"
         scrollButtons
         allowScrollButtonsMobile
         value={value}
@@ -67,11 +67,9 @@ const Products = () => {
         onChange={handleChange}
       >
         <Tab label="All Popular Products" {...a11yProps(0)} />
-        <Tab label="Dairy Products" {...a11yProps(1)} />
+        <Tab label="Dairy" {...a11yProps(1)} />
         <Tab label="Mart & Grocery" {...a11yProps(2)} />
-        <Tab label="Mart & Grocery" {...a11yProps(3)} />
-        <Tab label="Mart & Grocery" {...a11yProps(4)} />
-        <Tab label="Mart & Grocery" {...a11yProps(5)} />
+        <Tab label="Seeds" {...a11yProps(3)} />
       </Tabs>
       <div className="grid md:grid-cols-2 w-full  place-content-center place-items-center grid-cols-1  lg:grid-cols-3  2xl:grid-cols-5">
         {product.map((product) => (
