@@ -87,8 +87,8 @@ const ResponsiveNav = () => {
                   link={""}
                   l={faShop}
                 ></Li>
-                {ShopMenu && <ResponsiveShopMenu></ResponsiveShopMenu>}
               </p>
+              {ShopMenu && <ResponsiveShopMenu></ResponsiveShopMenu>}
               <Li i={"Vendors"} link={"vendors"} l={faDashboard}></Li>
 
               <p
@@ -103,8 +103,8 @@ const ResponsiveNav = () => {
                   megaMenu={megaMenu}
                   l={faPlateWheat}
                 ></Li>
-                {megaMenu && <ResponsiveMegaMenu></ResponsiveMegaMenu>}
               </p>
+              {megaMenu && <ResponsiveMegaMenu></ResponsiveMegaMenu>}
               <Li i={"Blog"} link={"/blog"} l={faBlog}></Li>
               <Li i={"Pages"} link={"/"} l={faPager}></Li>
               <Li i={"Contact"} link={"/contact"} l={faContactCard}></Li>
