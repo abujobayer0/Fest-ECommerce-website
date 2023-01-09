@@ -41,7 +41,12 @@ function a11yProps(index) {
   };
 }
 
-const Products = () => {
+const Products = ({
+  productCartHomeGlobal,
+  setproductCartHomeGlobal,
+  setWhishListHomeGlobal,
+  WishListHomeGlobal,
+}) => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -91,7 +96,14 @@ const Products = () => {
           {product.map((product) => (
             <TabPanel value={value} index={0}>
               {" "}
-              <SingleProduct product={product} />{" "}
+              <SingleProduct
+                key={product.id}
+                WishListHomeGlobal={WishListHomeGlobal}
+                setWhishListHomeGlobal={setWhishListHomeGlobal}
+                setproductCartHomeGlobal={setproductCartHomeGlobal}
+                productCartHomeGlobal={productCartHomeGlobal}
+                product={product}
+              />{" "}
             </TabPanel>
           ))}
 

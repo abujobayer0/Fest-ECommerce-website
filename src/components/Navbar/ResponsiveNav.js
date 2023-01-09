@@ -3,7 +3,6 @@ import {
   faCartShopping,
   faClose,
   faContactCard,
-  faDashboard,
   faFire,
   faHome,
   faInfo,
@@ -11,6 +10,7 @@ import {
   faPager,
   faPlateWheat,
   faShop,
+  faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
@@ -88,7 +88,7 @@ const ResponsiveNav = () => {
                 ></Li>
               </p>
               {ShopMenu && <ResponsiveShopMenu></ResponsiveShopMenu>}
-              <Li i={"Vendors"} link={"vendors"} l={faDashboard}></Li>
+              <Li i={"CheckOut"} link={"vendors"} l={faShoppingCart}></Li>
 
               <p
                 className="w-full gap-4 items-center flex justify-between flex-col text-left"

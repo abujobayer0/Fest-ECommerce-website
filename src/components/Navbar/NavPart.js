@@ -101,7 +101,7 @@ const NavPart = () => {
                   <path d="M14.6897 16.5171H9.35632V9.18381H16.6897V14.5171C16.6897 15.0476 16.4789 15.5563 16.1039 15.9314C15.7288 16.3064 15.2201 16.5171 14.6897 16.5171ZM10.6897 15.1838H14.6897C14.8665 15.1838 15.036 15.1136 15.1611 14.9885C15.2861 14.8635 15.3563 14.694 15.3563 14.5171V10.5171H10.6897V15.1838Z"></path>
                 </svg>
               </span>
-              <span class="text">Browse All Categories</span>
+              <span className="text">Browse All Categories</span>
               <span class="arrow dropdown-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +111,7 @@ const NavPart = () => {
                   viewBox="0 0 16 16"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
                   ></path>
                 </svg>
@@ -163,8 +163,8 @@ const NavPart = () => {
             <Link onMouseOver={handleShopDropDown}>
               <li>Shop </li>
             </Link>
-            <NavLink onMouseOver={handleMouseOver} to={"/vendors"}>
-              <li> Vendors</li>
+            <NavLink onMouseOver={handleMouseOver} to={"/checkout"}>
+              <li> CheckOut</li>
             </NavLink>
             <Link onMouseOver={handleMenuDropdown}>
               <li>Mega Menu</li>

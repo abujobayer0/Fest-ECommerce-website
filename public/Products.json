@@ -5,7 +5,7 @@
       "oldPrice": 32.8,
       "newPrice": 28.85,
       "description":"lorem ipsum dolor,sit amet consectetur adipisicing elit aliwuam offica ,corrupti rediendis minima nisi modi wuasi odio dolore empedet fuga eum wligendi",
-      "star": 3
+      "star": 3,"id":1
     },
   
     {
@@ -15,7 +15,7 @@
       "newPrice": 36.85,
       "description":
         "lorem ipsum dolor,sit amet consectetur adipisicing elit aliwuam offica ,corrupti rediendis minima nisi modi wuasi odio dolore empedet fuga eum wligendi",
-      "star": 5
+      "star": 5,"id":2
     },
     {
       "img" : "https://themepanthers.com/wp/nest/d1/wp-content/uploads/2022/02/product-1-1.jpg",
@@ -24,7 +24,7 @@
       "newPrice": 36.85,
       "description":
         "lorem ipsum dolor,sit amet consectetur adipisicing elit aliwuam offica ,corrupti rediendis minima nisi modi wuasi odio dolore empedet fuga eum wligendi",
-      "star": 5
+      "star": 5,"id":3
     },
     {
       "img": "https://themepanthers.com/wp/nest/d1/wp-content/uploads/2022/02/product-4-1.jpg",
@@ -33,7 +33,7 @@
       "newPrice": 48.12,
       "description":
         "lorem ipsum dolor,sit amet consectetur adipisicing elit aliwuam offica ,corrupti rediendis minima nisi modi wuasi odio dolore empedet fuga eum wligendi",
-      "star": 4
+      "star": 4,"id":4
     }
   ]
   

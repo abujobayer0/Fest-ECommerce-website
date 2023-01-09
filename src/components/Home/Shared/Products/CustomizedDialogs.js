@@ -68,19 +68,23 @@ export default function CustomizedDialogs({
   handleClickOpen,
   setOpen,
   open,
-  star,
   img,
   name,
   oldPrice,
+  setproductCartHomeGlobal,
+  product,
+  productCartHomeGlobal,
   newPrice,
   description,
 }) {
   const handleClose = () => {
     setOpen(false);
   };
-  const handleToast = () => {
+  const handleToast = (product, productCartHomeGlobal) => {
     setOpen(false);
-    toast.error("Please Add From Buy Page.");
+    toast.success(`Added ${name} To Cart.`);
+    const newProduct = [...productCartHomeGlobal, product];
+    setproductCartHomeGlobal(newProduct);
   };
   return (
     <div>
@@ -140,7 +144,7 @@ export default function CustomizedDialogs({
             }}
             autoFocus
             varient="contained"
-            onClick={handleToast}
+            onClick={() => handleToast(product, productCartHomeGlobal)}
           >
             Add To Cart{" "}
             <FontAwesomeIcon className="text-xl" icon={faCartArrowDown} />
