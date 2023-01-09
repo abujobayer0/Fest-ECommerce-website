@@ -77,9 +77,11 @@ export default function CustomizedDialogs({
 }) {
   const handleClose = () => {
     setOpen(false);
+  };
+  const handleToast = () => {
+    setOpen(false);
     toast.error("Please Add From Buy Page.");
   };
-
   return (
     <div>
       <Toaster />
@@ -138,7 +140,7 @@ export default function CustomizedDialogs({
             }}
             autoFocus
             varient="contained"
-            onClick={handleClose}
+            onClick={handleToast}
           >
             Add To Cart{" "}
             <FontAwesomeIcon className="text-xl" icon={faCartArrowDown} />
