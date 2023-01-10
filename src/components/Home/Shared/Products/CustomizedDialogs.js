@@ -15,7 +15,7 @@ import {
 } from "@mui/icons-material";
 import LOGO from "../../../Images/LOGO.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faCartArrowDown, faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { Tooltip, tooltipClasses } from "@mui/material";
 import { toast, Toaster } from "react-hot-toast";
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -71,20 +71,30 @@ export default function CustomizedDialogs({
   img,
   name,
   oldPrice,
+  cartColor,
   setproductCartHomeGlobal,
   product,
   productCartHomeGlobal,
   newPrice,
   description,
+  setColor,
 }) {
   const handleClose = () => {
     setOpen(false);
   };
-  const handleToast = (product, productCartHomeGlobal) => {
+  const handleToast = (product, productCartHomeGlobal, setColor) => {
     setOpen(false);
+    setColor((current) => !current);
     toast.success(`Added ${name} To Cart.`);
-    const newProduct = [...productCartHomeGlobal, product];
-    setproductCartHomeGlobal(newProduct);
+    if (cartColor) {
+      setproductCartHomeGlobal(
+        productCartHomeGlobal.filter((pt) => pt.id !== product.id)
+      );
+      console.log("removed");
+    } else {
+      const newProduct = [...productCartHomeGlobal, product];
+      setproductCartHomeGlobal(newProduct);
+    }
   };
   return (
     <div>
@@ -135,20 +145,41 @@ export default function CustomizedDialogs({
           </div>
         </DialogContent>
         <DialogActions>
-          <Button
-            style={{
-              backgroundColor: "#3bb77e ",
-              fontWeight: 600,
-              gap: "10px",
-              color: "white",
-            }}
-            autoFocus
-            varient="contained"
-            onClick={() => handleToast(product, productCartHomeGlobal)}
-          >
-            Add To Cart{" "}
-            <FontAwesomeIcon className="text-xl" icon={faCartArrowDown} />
-          </Button>
+          {cartColor ? (
+            <Button
+              style={{
+                backgroundColor: "red",
+                fontWeight: 600,
+                gap: "10px",
+                color: "white",
+              }}
+              autoFocus
+              varient="contained"
+              onClick={() =>
+                handleToast(product, productCartHomeGlobal, setColor)
+              }
+            >
+              Remove From Cart{" "}
+              <FontAwesomeIcon className="text-xl" icon={faCartArrowDown} />
+            </Button>
+          ) : (
+            <Button
+              style={{
+                backgroundColor: "#3bb77e ",
+                fontWeight: 600,
+                gap: "10px",
+                color: "white",
+              }}
+              autoFocus
+              varient="contained"
+              onClick={() =>
+                handleToast(product, productCartHomeGlobal, setColor)
+              }
+            >
+              Add To Cart{" "}
+              <FontAwesomeIcon className="text-xl" icon={faCartPlus} />
+            </Button>
+          )}
         </DialogActions>
       </BootstrapDialog>
     </div>

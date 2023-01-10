@@ -6,6 +6,7 @@ import Catagories from "./Shared/Catagories/Catagories";
 import Hero from "./Shared/Hero/Hero";
 import Footer from "../Footer/Footer";
 import Products from "./Shared/Products/Products";
+import Navbar from "../Navbar/Navbar";
 const Home = () => {
   const [productCartHomeGlobal, setproductCartHomeGlobal] = useState([]);
   const [WishListHomeGlobal, setWhishListHomeGlobal] = useState([]);
@@ -19,6 +20,12 @@ const Home = () => {
   return (
     <div className="relative  ">
       <Top></Top>
+      <Navbar
+        setproductCartHomeGlobal={setproductCartHomeGlobal}
+        productCartHomeGlobal={productCartHomeGlobal}
+        WishListHomeGlobal={WishListHomeGlobal}
+        setWhishListHomeGlobal={setWhishListHomeGlobal}
+      ></Navbar>
       <Hero></Hero>
       <Catagories></Catagories>
       <Cards></Cards>

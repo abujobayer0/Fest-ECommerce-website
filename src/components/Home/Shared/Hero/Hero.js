@@ -7,7 +7,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "./Style.css";
-import Navbar from "../../../Navbar/Navbar";
 import OverLaySearch from "./OverLaySearch";
 
 // import required modules
@@ -15,7 +14,6 @@ import OverLaySearch from "./OverLaySearch";
 export default function Hero() {
   return (
     <>
-      <Navbar></Navbar>
       <Swiper
         rewind={true}
         pagination={{
