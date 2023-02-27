@@ -41,12 +41,7 @@ function a11yProps(index) {
   };
 }
 
-const Products = ({
-  productCartHomeGlobal,
-  setproductCartHomeGlobal,
-  setWhishListHomeGlobal,
-  WishListHomeGlobal,
-}) => {
+const Products = () => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -54,7 +49,7 @@ const Products = ({
   };
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch("Products.json")
+    fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
@@ -92,18 +87,11 @@ const Products = ({
           <Tab label="Mart & Grocery" {...a11yProps(2)} />
           <Tab label="Seeds" {...a11yProps(3)} />
         </Tabs>
-        <div className="grid md:grid-cols-2 w-full  place-content-center place-items-center grid-cols-1  lg:grid-cols-3  2xl:grid-cols-5">
-          {product.map((product) => (
-            <TabPanel value={value} index={0}>
+        <div className="grid md:grid-cols-3 w-full  place-content-center place-items-center grid-cols-1  lg:grid-cols-3  2xl:grid-cols-5">
+          {product.map((product, indx) => (
+            <TabPanel key={indx} value={value} index={0}>
               {" "}
-              <SingleProduct
-                key={product.id}
-                WishListHomeGlobal={WishListHomeGlobal}
-                setWhishListHomeGlobal={setWhishListHomeGlobal}
-                setproductCartHomeGlobal={setproductCartHomeGlobal}
-                productCartHomeGlobal={productCartHomeGlobal}
-                product={product}
-              />{" "}
+              <SingleProduct product={product} />{" "}
             </TabPanel>
           ))}
 

@@ -87,7 +87,7 @@ const NavPart = () => {
               onClick={handleClick("bottom-start")}
               onMouseOver={handleMouseOver}
             >
-              <span class="list">
+              <span className="list">
                 <svg
                   width="17"
                   height="17"
@@ -102,7 +102,7 @@ const NavPart = () => {
                 </svg>
               </span>
               <span className="text">Browse All Categories</span>
-              <span class="arrow dropdown-icon">
+              <span className="arrow dropdown-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -154,7 +154,7 @@ const NavPart = () => {
                 Deals
               </li>
             </NavLink>
-            <NavLink onMouseOver={handleMouseOver} to={"/home"}>
+            <NavLink onMouseOver={handleMouseOver} to={"/"}>
               <li>Home</li>
             </NavLink>
             <NavLink onMouseOver={handleMouseOver} to={"/about"}>

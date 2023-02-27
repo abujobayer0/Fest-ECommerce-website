@@ -43,11 +43,11 @@ const Catagories = () => {
         modules={[Pagination, Autoplay]}
         className="mySwiper"
       >
-        {products.map((product) => (
+        {products.map((product, indx) => (
           <SwiperSlide>
             {" "}
             <SlideItem
-              key={product.image}
+              key={indx}
               name={product.name}
               bg={product.bg}
               img={product.image}

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
 import Top from "../Top/Top";
 import Cards from "./Shared/Card/Cards";
 import Catagories from "./Shared/Catagories/Catagories";
@@ -7,34 +6,16 @@ import Hero from "./Shared/Hero/Hero";
 import Footer from "../Footer/Footer";
 import Products from "./Shared/Products/Products";
 import Navbar from "../Navbar/Navbar";
+
 const Home = () => {
-  const [productCartHomeGlobal, setproductCartHomeGlobal] = useState([]);
-  const [WishListHomeGlobal, setWhishListHomeGlobal] = useState([]);
-  useEffect(() => {
-    const newCartProduct = [...productCartHomeGlobal, productCartHomeGlobal];
-    const newWishListProduct = [...WishListHomeGlobal, WishListHomeGlobal];
-    setproductCartHomeGlobal(newCartProduct);
-    setWhishListHomeGlobal(newWishListProduct);
-  }, []);
-  console.log(WishListHomeGlobal);
   return (
     <div className="relative  ">
       <Top></Top>
-      <Navbar
-        setproductCartHomeGlobal={setproductCartHomeGlobal}
-        productCartHomeGlobal={productCartHomeGlobal}
-        WishListHomeGlobal={WishListHomeGlobal}
-        setWhishListHomeGlobal={setWhishListHomeGlobal}
-      ></Navbar>
+      <Navbar></Navbar>
       <Hero></Hero>
       <Catagories></Catagories>
       <Cards></Cards>
-      <Products
-        setproductCartHomeGlobal={setproductCartHomeGlobal}
-        productCartHomeGlobal={productCartHomeGlobal}
-        WishListHomeGlobal={WishListHomeGlobal}
-        setWhishListHomeGlobal={setWhishListHomeGlobal}
-      ></Products>
+      <Products></Products>
       <Footer></Footer>
     </div>
   );

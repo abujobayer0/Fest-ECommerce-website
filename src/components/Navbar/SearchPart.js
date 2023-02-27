@@ -56,17 +56,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const SearchPart = ({
-  setproductCartHomeGlobal,
-  productCartHomeGlobal,
-  WishListHomeGlobal,
-  setWhishListHomeGlobal,
-}) => {
-  const [cartDetail, setCartDetail] = useState(false);
-  const [wishListDetail, setWishListDetail] = useState(false);
-  const handleWishList = () => {
-    setWishListDetail((current) => !current);
-  };
+const SearchPart = () => {
   const handleCart = () => {};
   return (
     <div className="flex  shadow-sm justify-between px-4 items-center">
@@ -104,10 +94,7 @@ const SearchPart = ({
             <FontAwesomeIcon className="text-xl" icon={faRecycle} /> Compare
           </li>
           <div className="relative">
-            <li
-              onClick={handleWishList}
-              className="hover:text-[#3bb77e]  cursor-pointer transition-all ease-in-out flex items-center gap-2"
-            >
+            <li className="hover:text-[#3bb77e]  cursor-pointer transition-all ease-in-out flex items-center gap-2">
               {" "}
               <FontAwesomeIcon
                 className="text-xl"
@@ -115,23 +102,14 @@ const SearchPart = ({
               /> Wishlist{" "}
               <span className="text-sm  text-white rounded-full w-[15px] h-[15px] flex justify-center items-center  bg-[#3bb77e]">
                 {" "}
-                {WishListHomeGlobal.length - 1}
               </span>
             </li>
-            {wishListDetail && (
-              <div className="w-[600px] gap-3 overflow-hidden overflow-y-auto h-[400px] flex flex-col justify-start items-center p-2 right-0   absolute mt-4 z-20 border-2 bg-white">
-                {WishListHomeGlobal.map((i) => (
-                  <WishList faHeart={faHeart} i={i} doller={"$"} key={i.id} />
-                ))}
-              </div>
-            )}
           </div>
           <li className="hover:text-[#3bb77e] relative  cursor-pointer transition-all ease-in-out flex items-center gap-2">
             <FontAwesomeIcon className="text-xl" icon={faCartArrowDown} />
             Cart
             <span className="text-sm  text-white rounded-full w-[15px] h-[15px] flex justify-center items-center  bg-[#3bb77e]">
               {" "}
-              {productCartHomeGlobal.length - 1}
             </span>
           </li>
           <li className="hover:text-[#3bb77e] cursor-pointer transition-all ease-in-out flex items-center gap-2 ">

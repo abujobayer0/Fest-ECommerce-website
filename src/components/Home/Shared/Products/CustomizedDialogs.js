@@ -72,35 +72,23 @@ export default function CustomizedDialogs({
   name,
   oldPrice,
   cartColor,
-  setproductCartHomeGlobal,
-  product,
-  productCartHomeGlobal,
+
   newPrice,
   description,
-  setColor,
 }) {
   const handleClose = () => {
     setOpen(false);
   };
-  const handleToast = (product, productCartHomeGlobal, setColor) => {
+  const handleToast = (setColor) => {
     setOpen(false);
     setColor((current) => !current);
     toast.success(`Added ${name} To Cart.`);
-    if (cartColor) {
-      setproductCartHomeGlobal(
-        productCartHomeGlobal.filter((pt) => pt.id !== product.id)
-      );
-      console.log("removed");
-    } else {
-      const newProduct = [...productCartHomeGlobal, product];
-      setproductCartHomeGlobal(newProduct);
-    }
   };
   return (
     <div>
       <Toaster />
       <div className="flex items-center gap-2  w-full ">
-        <h1 className="text-lg font-semibold CPC">
+        <h1 className="text-sm font-semibold CPC">
           Quick View <LinearScale />
         </h1>
         <BootstrapTooltip title="View ">
@@ -133,7 +121,7 @@ export default function CustomizedDialogs({
             <ProductionQuantityLimitsOutlined /> Limited
           </span>
           <div className="flex">
-            <img src={img} className="w-44 lg:w-52" alt="" />
+            <img src={img} className="w-44 m-4 h-44 lg:h-44 lg:w-52" alt="" />
             <div className="text-gray-700">
               <h1 className="text-2xl font-semibold ">{name}</h1>
               <p>{description}</p>
@@ -155,9 +143,6 @@ export default function CustomizedDialogs({
               }}
               autoFocus
               varient="contained"
-              onClick={() =>
-                handleToast(product, productCartHomeGlobal, setColor)
-              }
             >
               Remove From Cart{" "}
               <FontAwesomeIcon className="text-xl" icon={faCartArrowDown} />
@@ -172,9 +157,6 @@ export default function CustomizedDialogs({
               }}
               autoFocus
               varient="contained"
-              onClick={() =>
-                handleToast(product, productCartHomeGlobal, setColor)
-              }
             >
               Add To Cart{" "}
               <FontAwesomeIcon className="text-xl" icon={faCartPlus} />
